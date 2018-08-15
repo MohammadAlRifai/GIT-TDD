@@ -8,11 +8,17 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../angular-client/')));
 
 app.get('/cats', function(req, res) {
+	console.log('server: get all cats');
+	res.json('rifaa 8ata3a jozaa faza3a');
 	// TODO - your code here!
 });
 
 app.post('/cats', function(req, res) {
-	// TODO - your code here!
+	console.log('server: add new cat');
+	db.save(req.body, function(msg) {
+		console.log(msg);
+		res.send(msg);
+	});
 });
 
 let port = 1128;

@@ -1,20 +1,20 @@
 <div ng-controller='catsCtrl'>
-	<table  border='1' style='border-collapse:collapse'>
-		<thead>
-			<tr>
-				<th>Cat Name</th>
-				<th>ownerEmail</th>
-				<th>adoptionMessage</th>
-				<th>Image</th>
-			</tr>
-			<thead>
-				<tbody>
-					<tr ng-repeat='cat in cats'>
-						<td>{{cat.catName}}</td>
-						<td>{{cat.ownerEmail}}</td>
-						<td>{{cat.adoptionMessage}}</td>
-						<td><img ng-src="{{cat.imageUrl }}" height=100 width=100></img></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+  <table border='1' style='border-collapse:collapse'>
+    <thead>
+      <tr>
+        <th>Cat Name</th>
+        <th>Owner Email</th>
+        <th>Adoption Message</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='cat in cats'>
+        <td>{{cat.catName}}</td>
+        <td>{{cat.ownerEmail}}</td>
+        <td>{{cat.adoptionMessage}}</td>
+        <td><img ng-src="{{cat.imageUrl }}" height=100 width=100></img></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -5,11 +5,22 @@ app.component('cats', {
 });
 app.controller('catsCtrl', function($scope, $http, $window) {
   var getCats = function() {
-    // TODO: Your code here
+    console.log('front_end: get all cats');
   };
   getCats();
 
   $scope.addCats = function() {
-    // TODO: Your code here
+    console.log('front_end: add new cat');
+
+    $http.post('/cats', $scope.$$watchers).then(
+      function(response) {
+        console.log(response.data);
+        alert(response.data);
+      },
+      function(response) {
+        console.log(response.data);
+        alert(response.data);
+      }
+    );
   };
 });
