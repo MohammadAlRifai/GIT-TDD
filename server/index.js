@@ -18,7 +18,6 @@ app.get('/cats', function(req, res) {
       res.send(result);
     }
   });
-  // res.json('rifaa 8ata3a jozaa faza3a');
 });
 
 app.post('/cats', function(req, res) {
