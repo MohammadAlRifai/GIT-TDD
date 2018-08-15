@@ -9,9 +9,11 @@ app.controller('catsCtrl', function($scope, $http, $window) {
     $http.get('/cats').then(
       function(response) {
         console.log('get all cats sucess');
-        alert('get all cats sucess');
+        // alert('get all cats sucess');
         console.log(response.data);
+        $scope.cats = response.data;
         //render need work on it
+        // return response.data;
       },
       function(response) {
         console.log(response.data);
