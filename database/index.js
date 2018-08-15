@@ -36,33 +36,17 @@ let save = (data, callback) => {
     }
   });
 };
-
+let getAll = callback => {
+  console.log('db: get all cats');
+  Cat.find({}, function(err, data) {
+    if (err) {
+      callback('error when get all cats', err);
+    } else {
+      callback('get all cats sucess', data);
+    }
+  });
+};
 module.exports.Cat = Cat;
+module.exports.getAll = getAll;
 
 module.exports.save = save;
-
-/*
-
-
-// console.log('data here:', data);
-  let catNameFromData = data[3].last;
-  let ownerEmailFromData = data[2].last;
-  let imageUrlFromData = data[1].last;
-  let adoptionMessageFromData = data[0].last;
-  // console.log(catName, ownerEmail, imageUrl, adoptionMessage);
-  Cat.insert({
-    catName: catNameFromData,
-    ownerEmail: ownerEmailFromData,
-    imageUrl: imageUrlFromData,
-    adoptionMessage: adoptionMessageFromData
-  });
-
-
-
-
-
-
-
-
-
-*/

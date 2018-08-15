@@ -6,6 +6,19 @@ app.component('cats', {
 app.controller('catsCtrl', function($scope, $http, $window) {
   var getCats = function() {
     console.log('front_end: get all cats');
+    $http.get('/cats').then(
+      function(response) {
+        console.log('get all cats sucess');
+        alert('get all cats sucess');
+        console.log(response.data);
+
+        //        render;
+      },
+      function(response) {
+        console.log(response.data);
+        alert(response.data);
+      }
+    );
   };
   getCats();
 
