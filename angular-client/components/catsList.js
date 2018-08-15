@@ -1,19 +1,15 @@
-var app = angular.module('catsList' );
+var app = angular.module('catsList');
 
 app.component('cats', {
-	templateUrl: '/templates/adoptCat.html'
+  templateUrl: '/templates/adoptCat.html'
 });
-app.controller('catsCtrl', function ($scope, $http,$window){
-var getCats = function() {
-	// TODO: Your code here
+app.controller('catsCtrl', function($scope, $http, $window) {
+  var getCats = function() {
+    // TODO: Your code here
+  };
+  getCats();
 
-};
-getCats();
-
-$scope.addCats=function() {
-// TODO: Your code here
-
-
-}
-
+  $scope.addCats = function() {
+    // TODO: Your code here
+  };
 });

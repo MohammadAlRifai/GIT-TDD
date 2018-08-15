@@ -1,9 +1,7 @@
 var app = angular.module('catsList');
 
 app.component('app', {
-	templateUrl :'/templates/app.html'
+  templateUrl: '/templates/app.html'
 });
 
-app.controller('app' , function ($scope,$http ) {
-
-})
+app.controller('app', function($scope, $http) {});

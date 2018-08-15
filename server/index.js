@@ -7,24 +7,17 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../angular-client/')));
 
-app.get('/cats', function (req, res) {
-  // TODO - your code here!
-  
-
+app.get('/cats', function(req, res) {
+	// TODO - your code here!
 });
 
-app.post('/cats', function (req, res) {
-  // TODO - your code here!
-  
-})
-
-
+app.post('/cats', function(req, res) {
+	// TODO - your code here!
+});
 
 let port = 1128;
 
 app.listen(port, function() {
-  console.log(`listening on port ${port}`);
+	console.log(`listening on port ${port}`);
 });
-module.exports = app
-
-
+module.exports = app;
