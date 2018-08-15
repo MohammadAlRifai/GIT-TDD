@@ -11,8 +11,7 @@ app.controller('catsCtrl', function($scope, $http, $window) {
         console.log('get all cats sucess');
         alert('get all cats sucess');
         console.log(response.data);
-
-        //        render;
+        //render need work on it
       },
       function(response) {
         console.log(response.data);
