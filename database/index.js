@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/catsList');
+//mongoose.connect('mongodb://m&m:m1234567@ds125365.mlab.com:25365/cats');
 var db = mongoose.connection;
 db.on('error', function() {
   console.log('Mongoose Disconnected !');

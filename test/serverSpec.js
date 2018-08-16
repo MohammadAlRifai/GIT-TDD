@@ -45,7 +45,7 @@ describe('Server', function() {
   });
 });
 
-describe('DataBase', function() {
+describe('Database', function() {
   describe('#save()', function() {
     it('should save without error', function(done) {
       var cat = new db.Cat({
